@@ -1,0 +1,159 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+.nav-name { font-weight: 700; font-size: 1.1rem; color: #2563eb; }
+nav ul { list-style: none; display: flex; gap: 1.8rem; }
+nav ul a { font-size: 0.9rem; color: #555; transition: color 0.2s; }
+nav ul a:hover { color: #2563eb; }
+
+/* SECTIONS */
+section { padding: 70px 2rem; max-width: 900px; margin: 0 auto; }
+section.gray { background: #f8f9fa; max-width: 100%; padding: 70px 0; }
+section.gray > * { max-width: 900px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem; }
+
+h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.2rem; color: #111; }
+h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.8rem; color: #111; }
+
+/* HOME */
+#home {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2563eb;
+  margin-bottom: 1.2rem;
+}
+#home h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem; }
+.course { color: #2563eb; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+.tagline { color: #777; font-size: 0.95rem; margin-bottom: 1.5rem; }
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn:hover { background: #1d4ed8; }
+
+/* ABOUT */
+#about > p { color: #555; margin-bottom: 2rem; }
+
+/* TWO COLUMN */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+/* CARD */
+.card {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+}
+#projects .card { background: #fff; }
+
+/* SKILL LIST */
+.skill-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.skill-list li {
+  padding: 0.45rem 0.8rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: #444;
+}
+
+/* EDUCATION */
+.edu-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+.dot {
+  width: 12px; height: 12px;
+  background: #2563eb;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.edu-item strong { font-size: 0.92rem; display: block; margin-bottom: 0.15rem; }
+.edu-item p { font-size: 0.82rem; color: #777; }
+
+/* ACHIEVEMENTS */
+.ach-item {
+  padding: 0.7rem 1rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+}
+
+/* PROJECTS */
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+#projects .card p { font-size: 0.85rem; color: #666; margin-bottom: 0.8rem; }
+.tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.tags span {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* CONTACT */
+.contact-row { display: flex; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.4rem;
+  flex: 1;
+  min-width: 200px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contact-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37,99,235,0.1); }
+.contact-card span { font-size: 1.5rem; }
+.contact-card strong { display: block; font-size: 0.85rem; margin-bottom: 0.1rem; }
+.contact-card p { font-size: 0.82rem; color: #777; }
+
+.footer { text-align: center; font-size: 0.8rem; color: #aaa; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; }
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+  .two-col, .projects-grid { grid-template-columns: 1fr; }
+  .contact-row { flex-direction: column; }
+  nav ul { gap: 1rem; }
+}
